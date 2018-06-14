@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Automation Test</title>
+</head>
+<body>
+	<h1>Calculate Date</h1>
+
+	<!-- a: <input type="number" name="a" id="a"><br>
+	b: <input type="number" name="b" id="b"><br>
+	<button onclick="add(document.getElementById('a').value,document.getElementById('b').value)">Add</button> -->
+
+	startDate: <input type="date" id="startDate"><br>
+	closeDate: <input type="date" id="closeDate"><br>
+	<button onclick="dayDiff(document.getElementById('startDate').value, document.getElementById('closeDate').value)">Calculate Day Diff</button>
+	<button onclick="monthDiff(document.getElementById('startDate').value, document.getElementById('closeDate').value)">Calculate Month Diff</button>
+	<div id="result"></div>
+	<br>
+	startDate: <input type="date" id="startDate_2"><br>
+	timeToAdd: <input type="number" id="addNumber">
+	<button onclick="addMonth(document.getElementById('startDate_2').value, document.getElementById('addNumber').value)">Calculate Add month</button>
+	<div id="resultAddMonth"></div>
+	<script src="Auto_TCB.js">
+		
+	</script>
+</body>
+</html>
