@@ -1,27 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Automation Test</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+	    crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="./style.css">
 </head>
+
 <body>
 	<h1>Calculate Date</h1>
 
-	<!-- a: <input type="number" name="a" id="a"><br>
-	b: <input type="number" name="b" id="b"><br>
-	<button onclick="add(document.getElementById('a').value,document.getElementById('b').value)">Add</button> -->
-
-	startDate: <input type="date" id="startDate"><br>
-	closeDate: <input type="date" id="closeDate"><br>
-	<button onclick="dayDiff(document.getElementById('startDate').value, document.getElementById('closeDate').value)">Calculate Day Diff</button>
-	<button onclick="monthDiff(document.getElementById('startDate').value, document.getElementById('closeDate').value)">Calculate Month Diff</button>
-	<div id="result"></div>
+	<div class="input-group">
+		<div class="input-group-prepend">
+			<span class="input-group-text">Start and End date</span>
+		</div>
+		<input type="date" class="form-control " id="startDate">
+		<input type="date" class="form-control " id="closeDate">
+	</div>
 	<br>
-	startDate: <input type="date" id="startDate_2"><br>
-	timeToAdd: <input type="number" id="addNumber">
-	<button onclick="addMonth(document.getElementById('startDate_2').value, document.getElementById('addNumber').value)">Calculate Add month</button>
-	<div id="resultAddMonth"></div>
+	<button type="button" class="btn btn-primary" onclick="dayDiff(document.getElementById('startDate').value, document.getElementById('closeDate').value)">Calculate Day Diff</button>
+	<button type="button" class="btn btn-primary" onclick="monthDiff(document.getElementById('startDate').value, document.getElementById('closeDate').value)">Calculate Month Diff</button>
+	<br>
+	<br>
+	<span class="input-group-text" id="result">Result</span>
+	<br>
+	<div class="input-group">
+		<div class="input-group-prepend">
+			<span class="input-group-text">Start Date and Number of Months</span>
+		</div>
+		<input type="date" class="form-control" id="startDate_2">
+		<input type="number" class="form-control" id="addNumber">
+	</div>
+	<br>
+	<button type="button" class="btn btn-primary" onclick="addMonth(document.getElementById('startDate_2').value, document.getElementById('addNumber').value)">Calculate Add month</button>
+	<br>
+	<br>
+	<span class="input-group-text" id="resultAddMonth">Result after add month</span>
 	<script src="Auto_TCB.js">
-		
 	</script>
 </body>
+
 </html>

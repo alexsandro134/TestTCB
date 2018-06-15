@@ -1,11 +1,7 @@
 function addMonth(inputDate, x) {
     var currentDate = new Date(inputDate);
-    var nextDate = currentDate.setMonth(currentDate.getMonth() + parseInt(x));
-    var month = nextDate.getMonth() + 1,
-        date = nextDate.getDate(),
-        year = nextDate.getFullYear();
-    var displayText = year + month + date;
-    document.getElementById('resultAddMonth').innerHTML = displayText;
+    currentDate.setMonth(currentDate.getMonth() + parseInt(x));
+    document.getElementById('resultAddMonth').innerHTML = currentDate.toLocaleDateString('en-US');
 }
 
 function monthDiff(startInput, closeInput) {
