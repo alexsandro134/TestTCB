@@ -91,23 +91,8 @@ public class Test_TCB extends CommonVerify {
 		WebElement uploadElement = driver.findElement(By.xpath("//div[@command='Files']"));
 		uploadElement.click();
 
-		Robot robot = new Robot();
-
-		Thread.sleep(1000);
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-
-		robot.keyPress(KeyEvent.VK_CONTROL);
-		robot.keyPress(KeyEvent.VK_V);
-
-		robot.keyRelease(KeyEvent.VK_CONTROL);
-		robot.keyRelease(KeyEvent.VK_V);
-		Thread.sleep(1000);
-
-		robot.keyPress(KeyEvent.VK_ENTER);
-		robot.keyRelease(KeyEvent.VK_ENTER);
-		Thread.sleep(1000);
-
+		sendKeyToUpload();
+		
 		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(imageSelected)));
 		isElementDisplayed(driver, imageSelected);
 		clickToElement(driver, sendBtn);
@@ -128,6 +113,26 @@ public class Test_TCB extends CommonVerify {
 	public int randomGenerate() {
 		Random rand = new Random();
 		return rand.nextInt(99999);
+	}
+
+	public void sendKeyToUpload() {
+		Robot robot = new Robot();
+
+		Thread.sleep(1000);
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+
+		robot.keyPress(KeyEvent.VK_CONTROL);
+		robot.keyPress(KeyEvent.VK_V);
+
+		robot.keyRelease(KeyEvent.VK_CONTROL);
+		robot.keyRelease(KeyEvent.VK_V);
+		Thread.sleep(1000);
+
+		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.keyRelease(KeyEvent.VK_ENTER);
+		Thread.sleep(1000);
+
 	}
 
 }
